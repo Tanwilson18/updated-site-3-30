@@ -1,0 +1,187 @@
+:root {
+    --text-color: #333;
+    --heading-color: darkblue;
+    --link-color: blue;
+    --link-hover-color: red;
+    --form-background: #89CFF0;
+    --form-background-bottom: #0096FF;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--text-color);
+    line-height: 1.5;
+    font-family: 'Open Sans', sans-serif;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--heading-color);
+    font-family: 'Merriweather', serif;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+
+    transition: color 300ms ease;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+article img {
+    width: 400px;
+}
+
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+main {
+    max-width: 50rem;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+
+.button {
+    cursor: pointer;
+    user-select: none;
+    display: inline-block;
+    border: 1px solid var(--link-color);
+    padding: .5rem 1.5rem;
+    transition: background-color 300ms ease;
+}
+
+.button:hover {
+    background-color: var(--link-color);
+    color: white;
+
+}
+
+.hero {
+    position: relative;
+}
+
+.hero .overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0, .2);
+}
+
+.hero h1 {
+    color: seashell;
+    font-size: 5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, .4);
+}
+
+.hero p {
+    margin: 0;
+}
+
+nav {
+    display: block;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.form-svg {
+    width: 200px;
+
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cards img {
+    width: 100%;
+    transition: transform 400ms;
+}
+
+.cards:hover img {
+    transform: scale(1.1);
+}
+
+.cards a {
+    cursor: pointer;
+
+}
+
+.cards p {
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+section {
+    margin: 0 1rem;
+}
+
+form {
+    display: grid;
+}
+
+fieldset {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-column-gap: 0.5rem;
+    grid-row-gap: 0.8rem;
+
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+legend {
+    grid-column: 1 / span 2;
+    margin-bottom: 1rem;
+}
+
+/* add spacing below elements  */
+form>input,
+textarea,
+fieldset,
+button {
+    margin-bottom: 1.5rem;
+}
+
+
+body.form {
+    font-size: 1.5rem;
+    color: var(--form-text-color);
+    background-color: var(--form-background);
+    background: linear-gradient(to top, var(--form-background), var(--form-background-bottom));
+}
